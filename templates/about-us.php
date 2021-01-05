@@ -2,53 +2,67 @@
     <?php 
 	get_header();
 	//Template Name: About Us
+	 
+     $about_us = get_field('about_us_section');
+	 $how_we_work = get_field('how_we_work_section');
+	
     ?>
    
 	    <div class='container'>
       			
 			  <section class=" text-center">
-				<h3 class='text-centre'>About us</h3>
-                <p class="mt-3 lead">LightWork is a workers co-op focused on fostering justice and belonging through safer, inclusive and more diverse work environments.We work with organizations to conduct long-term demographic research, manage organizational change ptocesses, povide career support for marginalized employees, and offer workshops to create an environment where differences are valued through a culture of care. </p>
+			  <?php if($about_us['title'] != "" && $about_us['body_text'] != "" ):?>
+				<h3 class='text-centre'><?php echo $about_us['title']; ?></h3>
+				<?php echo $about_us['body_text']; ?>
+				<?php endif; ?>
 				</section>
-				<div class="text-center">
-				
-				<h3 class='text-centre'>How we work</h3>
-                <p class="mt-3 lead">Many hands make light work - we seek to unlock the potential of every team member to contribute their fullest, understanding that this lightens everyone's load.</p>
-				</div>
+
+			
+				<div class='text-centre'>
+				<?php if($how_we_work['title'] != "" && $how_we_work['body'] != "" ):?>
+					<h3 class='text-center '><?php echo $how_we_work['title']; ?></h3>
+					<?php echo $how_we_work['body']; ?>
+				<?php endif; ?>
+			</div>
 		</div>
-	   
-		<section class="container ">
-			<div class = "d-flex">
-		<p class="mt-3 lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-			<img src="<?php echo get_template_directory_uri() ?>/assets/images/2.png"  alt="image">
+
+
+<!-- BIOGRAPHY SECTION -->
+		<section class=" container text-center ">
+		<h3 class="font-weight-bold d-none d-lg-block">Team</h3>
+			<button  class="btn btn-sample mb-3 d-lg-none " type="button" data-toggle="collapse" data-target="#collapseItems" aria-expanded="false" aria-controls="collapseItems">Team</button>
+			<div class="collapse d-lg-block" id="collapseItems">
+	<?php
+    $args = array(  
+        'post_type' => 'biography',
+        'post_status' => 'publish',
+        'posts_per_page' => 99, 
+        'orderby' => 'date', 
+        'order' => 'DESC', 
+    );
+
+    $loop = new WP_Query( $args ); 
+        
+    while ( $loop->have_posts() ) : $loop->the_post(); 
+        $bio_image = get_field('image');
+        $bio_name = get_field('name');
+        $bio_text = get_field('bio');
+
+
+	?>
+		<div class="pb-3 r">
+			<img src="<?php echo $bio_image['sizes']['medium']; ?>"  alt="<?php echo $bio_image['alt']; ?>">
+			<p class="mt-3 lead font-weight-bold"><?php echo $bio_name; ?></p>
+			<p class="mt-3 lead"><?php echo $bio_text; ?></p>
+
+		</div>
+
+	<?php endwhile; ?>
 </div>
-		<div class="d-flex">
-			<img src="<?php echo get_template_directory_uri() ?>/assets/images/11.png"  alt="image">
-    		<p class="mt-3 lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-		</div>
-		</section>
-
-	<section class=" container text-center">
-		<div>
-			<img src="<?php echo get_template_directory_uri() ?>/assets/images/18.png"  alt="image">
-			<h3>Aslam Bulbulia</h3>
-			<p class="mt-3 lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-	</div>
-		<div>
-			<img src="<?php echo get_template_directory_uri() ?>/assets/images/19.png"  alt="image">
-			<h3>Mohammed Zaqout</h3>
-			<p class="mt-3 lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-
-		</div>
-	<div>
-			<img src="<?php echo get_template_directory_uri() ?>/assets/images/21.png"  alt="image">
-			<h3>Steve Tornes</h3>
-			<p class="mt-3 lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-	</div>
-		</section>
+	</section>
         
         <?php 
     get_footer();
     ?>
-
 	    
+	

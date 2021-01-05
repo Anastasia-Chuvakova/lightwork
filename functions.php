@@ -23,5 +23,11 @@ wp_enqueue_style('lightwork-add-style', get_template_directory_uri() . "/assets/
 
 //  }
 //  add_action('wp_enqueue_scripts', 'lightwork_additional_style')
+
+
+//REGISTER POST TYPES
+require_once("theme-plugins/workshop.php");
+require_once("theme-plugins/biography.php");
+require_once("theme-plugins/services-card.php");
  ?>
  
