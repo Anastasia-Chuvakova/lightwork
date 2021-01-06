@@ -7,7 +7,7 @@
 
   <!-- Grid column -->
   <div class="col-md-5 col-lg-3 mt-md-0 mt-3  ">
-  <a class="navbar-logo w-100 p-3 rounded" href="#"><img src="<?php echo get_template_directory_uri() ?>/assets/images/logo.png" alt="logo"/></a>
+  <a class="navbar-logo w-100 p-3 rounded" href="#"><img src="<?php echo get_template_directory_uri() ?>/assets/images/logo/logo-nobg.png" alt="logo"/></a>
 	
 
   </div>
@@ -37,23 +37,7 @@
   <!-- Grid column -->
 
   <!-- Grid column -->
-  <div class="col-md-4  mb-md-0 mt-md-4  pl-md-0">
-
-	<!-- Links -->
-	<h5 class="font-weight-bold">Legal Stuff</h5>
-
-	<ul class="list-unstyled">
-	  <li>
-		<a class="text-dark" href="#!">Privacy Policy</a>
-	  </li>
-	  <li>
-		<a class="text-dark" href="#!">Terms of Service</a>
-	  </li>
-	 
-	</ul>
-
-  </div>
-  <!-- Grid column -->
+ 
 
 </div>
 <!-- Grid row -->

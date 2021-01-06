@@ -1,0 +1,74 @@
+/* SERVICES PAGE */
+.services-page__hero-container {
+  background: #acfcd9;
+}
+
+.services-page__outcomes-section {
+  border: 3px solid rgb(85, 214, 190);
+}
+
+.services-page__info-section {
+  border-bottom: 2px solid rgb(221, 221, 221);
+}
+
+/* SERVICES - WORKSHOP */
+
+.services__body p {
+  margin: 0;
+}
+
+.workshop-description {
+  position: relative;
+  width: calc(100% - 300px);
+}
+.workshop-learningOutcomes__container {
+  border: 2px solid rgb(85, 214, 190);
+  position: relative;
+}
+.workshop-learning-outcomes li {
+  white-space: normal;
+}
+.workshop-learning-outcomes {
+  width: calc(100%);
+}
+.workshop-learning-outcomes p {
+  margin-bottom: 0;
+  /* flex-wrap: wrap; */
+}
+
+.workshop-image {
+  position: absolute;
+  bottom: 30%;
+  right: -25px;
+}
+/* .workshop-image img {
+  width: 300px;
+} */
+
+.workshop-content--has-img {
+  width: calc(100% - 320px);
+  max-width: 100%;
+}
+
+@media screen and (max-width: 768px) {
+  .workshop-image {
+    position: absolute;
+  }
+  .workshop-image img {
+    width: 100%;
+  }
+  .workshop-content--has-img {
+    width: 100% !important;
+  }
+  .workshop-learningOutcomes__container {
+    flex-direction: column-reverse;
+    width: calc(100%);
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .workshop-description {
+    position: relative;
+    width: calc(100%);
+  }
+}

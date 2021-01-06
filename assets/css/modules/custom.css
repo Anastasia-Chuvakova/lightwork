@@ -1,6 +1,21 @@
+html {
+  font-size: calc(1em + 1vw);
+}
+/* @media screen and (min-width: 50em) {
+  html {
+    font-size: 2vw;
+  }
+} */
+@media screen and (min-width: 75em) {
+  html {
+    font-size: 1em;
+  }
+}
+/* normal */
+
 body {
   opacity: 1;
-  transition: 1s opacity;
+  transition: 2s opacity;
 }
 body.fade-out {
   opacity: 0;
@@ -16,7 +31,7 @@ body.fade-out {
 }
 .page {
   opacity: 1;
-  animation-duration: 1s;
+  animation-duration: 2s;
   animation-name: fadein;
   animation-timing-function: easein;
 }
@@ -81,215 +96,4 @@ body.fade-out {
   border: none;
   outline: none;
   color: white;
-}
-
-/* CONTACT FORM 7 */
-.contact-page__container {
-  background-color: rgb(125, 91, 166);
-}
-
-.contact-page__form {
-  background: white;
-  max-width: 800px;
-  padding: 10px;
-  border-radius: 5px;
-}
-
-.contact-page__header {
-  color: white;
-}
-
-.wpcf7-form-control {
-  max-width: 100%;
-  width: 100%;
-}
-
-.cf-row--1 {
-  display: flex;
-  flex-direction: column;
-}
-.cf-row--1 > div {
-  width: 100%;
-}
-@media screen and (min-width: 768px) {
-  .cf-row--1 {
-    flex-direction: row;
-  }
-  .cf-row--1 > div:first-child {
-    width: 60%;
-  }
-  .cf-row--1 > div:nth-child(2) {
-    width: 40%;
-  }
-}
-.cf-row--2,
-.cf-row--3 {
-  display: flex;
-}
-.cf-row--2 > div,
-.cf-row--3 > div {
-  width: 100%;
-}
-
-.wpcf7-textarea {
-  padding: 10px;
-  border: 1px solid lightgray;
-}
-
-.wpcf7-text {
-  padding: 10px;
-  border: 1px solid lightgray;
-}
-
-::placeholder {
-  color: lightgrey;
-
-  /* font-size: 1.5em; */
-}
-
-/* HOME PAGE */
-
-.bg-banner {
-  background-color: #d9d9d9;
-}
-
-.hero-img__style {
-  background-color: #d9d9d9;
-  border-color: transparent;
-}
-.navbar-logo img:hover {
-  transform: scale(1.3);
-  border-radius: 4px;
-}
-
-.nav-item:hover {
-  background-color: #acfcd9;
-  border-radius: 5px;
-}
-
-.nav-item:focus {
-  background-color: blue;
-}
-
-.home-page__contact-container {
-  background-color: #acfcd9;
-}
-.home-page__contact-section {
-  background-color: white;
-  height: 300px;
-}
-
-.home-page__services-container {
-  position: relative;
-  overflow: hidden;
-}
-.home-page__services-container::before {
-  display: block;
-  content: "";
-  width: 20vw;
-  height: 20vw;
-  border-radius: 50%;
-  position: absolute;
-  top: -10vw;
-  background-color: #acfcd9;
-  right: -10vw;
-  z-index: -1;
-}
-.home-page__services-container::after {
-  display: block;
-  content: "";
-  width: 20vw;
-  height: 20vw;
-  border-radius: 50%;
-  position: absolute;
-  bottom: -10vw;
-  background-color: #acfcd9;
-  left: -10vw;
-  z-index: -1;
-}
-
-.home-page__services-container .card {
-  background-size: cover;
-  min-height: 200px;
-  color: #fff;
-  border-radius: 2.5rem;
-  width: 275px;
-  text-align: center;
-  border-color: white;
-}
-
-.home-page__services-container .card > .card-body {
-  background-color: rgba(75, 33, 181, 0.5);
-  border-radius: 2.5rem;
-  border-color: white;
-}
-
-.card-title {
-  color: white;
-}
-.card-text {
-  color: white;
-}
-/* SERVICES PAGE */
-.services-page__hero-container {
-  background: #acfcd9;
-}
-
-.services-page__outcomes-section {
-  border: 3px solid rgb(85, 214, 190);
-}
-
-.services-page__info-section {
-  border-bottom: 2px solid rgb(221, 221, 221);
-}
-
-/* SERVICES - WORKSHOP */
-
-.services__body p {
-  margin: 0;
-}
-
-.workshop-description {
-}
-.workshop-learningOutcomes__container {
-  border: 2px solid rgb(85, 214, 190);
-  position: relative;
-}
-.workshop-learning-outcomes {
-}
-.workshop-learning-outcomes p {
-  margin-bottom: 0;
-  flex-wrap: wrap;
-}
-
-.workshop-image {
-  /* position: absolute;
-  right: 5vw;
-  z-index: -1; */
-  position: absolute;
-  bottom: 30%;
-  right: -25px;
-}
-.workshop-image img {
-  width: 300px;
-}
-
-.workshop-content--has-img {
-  width: calc(100% - 320px);
-  max-width: 100%;
-}
-
-@media screen and (max-width: 768px) {
-  .workshop-image {
-    position: relative;
-  }
-  .workshop-image img {
-    width: 100%;
-  }
-  .workshop-content--has-img {
-    width: 100% !important;
-  }
-  .workshop-learningOutcomes__container {
-    flex-direction: column-reverse;
-  }
 }

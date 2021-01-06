@@ -18,9 +18,9 @@
     <header class="d-flex flex-column  align-items-center flex-md-row  justify-content-lg-between header-container">	 
    
    <div class=" " >
-    <a class="navbar-logo w-sm-50 w-xs-20 py-3 pl-xs-0 px-xs-2 px-sm-4 round " href="<?php echo site_url('/home') ?>"><img src="<?php echo get_template_directory_uri() ?>/assets/images/logo.png" alt="logo"/></a>   
+    <a class="navbar-logo w-sm-50 w-xs-20 py-3 pl-xs-0 px-xs-2 px-sm-4 round " href="<?php echo site_url('/home') ?>"><img src="<?php echo get_template_directory_uri() ?>/assets/images/logo/logo-nobg.png" alt="logo"/></a>   
     </div>
-    <nav class="navbar navbar-expand-lg navbar-light  p-0 p-md-4">
+    <nav class="navbar navbar-expand-lg navbar-light m-2  p-0 p-md-4">
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>

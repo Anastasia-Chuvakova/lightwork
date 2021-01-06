@@ -1,0 +1,77 @@
+/* HOME PAGE */
+
+.bg-banner {
+  background-color: #d9d9d9;
+}
+
+.hero-img__style {
+  background-color: #d9d9d9;
+  border-color: transparent;
+}
+
+.nav-item:hover {
+  background-color: #acfcd9;
+  border-radius: 5px;
+}
+
+.home-page__contact-container {
+  background-color: #acfcd9;
+}
+.home-page__contact-section {
+  background-color: white;
+  height: 300px;
+}
+
+.home-page__services-container {
+  position: relative;
+  overflow: hidden;
+}
+.home-page__services-container::before {
+  display: block;
+  content: "";
+  width: 20vw;
+  height: 20vw;
+  border-radius: 50%;
+  position: absolute;
+  top: -10vw;
+  background-color: #acfcd9;
+  right: -10vw;
+  z-index: -1;
+}
+.home-page__services-container::after {
+  display: block;
+  content: "";
+  width: 20vw;
+  height: 20vw;
+  border-radius: 50%;
+  position: absolute;
+  bottom: -10vw;
+  background-color: #acfcd9;
+  left: -10vw;
+  z-index: -1;
+}
+
+.home-page__services-container .card {
+  background-size: cover;
+  min-height: 200px;
+  color: #fff;
+  border-radius: 2.5rem;
+  width: 275px;
+  text-align: center;
+  border-color: white;
+}
+
+.home-page__services-container .card > .card-body {
+  background-color: rgba(75, 33, 181, 0.5);
+  border-radius: 2.5rem;
+  border-color: white;
+}
+
+.card-title {
+  color: white;
+  /* font-size: 20px; */
+}
+.card-text {
+  color: white;
+  /* font-size: 18px; */
+}

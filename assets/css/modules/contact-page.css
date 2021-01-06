@@ -1,0 +1,63 @@
+/* CONTACT FORM 7 */
+.contact-page__container {
+  background-color: rgb(125, 91, 166);
+}
+
+.contact-page__form {
+  background: white;
+  max-width: 800px;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.contact-page__header {
+  color: white;
+}
+
+.wpcf7-form-control {
+  max-width: 100%;
+  width: 100%;
+}
+
+.cf-row--1 {
+  display: flex;
+  flex-direction: column;
+}
+.cf-row--1 > div {
+  width: 100%;
+}
+@media screen and (min-width: 768px) {
+  .cf-row--1 {
+    flex-direction: row;
+  }
+  .cf-row--1 > div:first-child {
+    width: 60%;
+  }
+  .cf-row--1 > div:nth-child(2) {
+    width: 40%;
+  }
+}
+.cf-row--2,
+.cf-row--3 {
+  display: flex;
+}
+.cf-row--2 > div,
+.cf-row--3 > div {
+  width: 100%;
+}
+
+.wpcf7-textarea {
+  padding: 10px;
+  border: 1px solid lightgray;
+}
+
+.wpcf7-text {
+  padding: 10px;
+  border: 1px solid lightgray;
+}
+
+::placeholder {
+  color: lightgrey;
+
+  /* font-size: 1.5em; */
+}

@@ -1,0 +1,9 @@
+.workshops-page__container {
+  background-color: rgb(252, 100, 113);
+  overflow: hidden;
+}
+.workshops-page__body {
+  background-color: white;
+  height: 500px;
+  border-radius: 4px;
+}

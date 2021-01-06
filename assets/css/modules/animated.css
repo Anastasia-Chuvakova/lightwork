@@ -8,16 +8,22 @@
   }
 } */
 .circle {
+  overflow: hidden;
   width: 0;
   height: 0;
-  border: green
+  border: 1px solid white;
+  border-radius: 50%;
+  transition: all 0.25s ease-in-out;
+  background: linear-gradient(
+    to right,
+    rgb(85, 214, 190),
+    rgba(75, 33, 181, 0.5)
+  );
   /* border-left: 30px solid blue;
   border-right: 30px solid rgb(85, 214, 190);
   border-top: 30px solid rgba(75, 33, 181, 0.5);
   border-bottom: 30px solid #acfcd9; */
-  border-radius: 50%;
-  transition: all 0.25s ease-in-out;
-  background: linear-gradient(to right,  rgb(85, 214, 190), rgba(75, 33, 181, 0.5));
+
   /* animation-name: spin;
   animation-duration: 5000ms;
   animation-iteration-count: infinite;
@@ -40,7 +46,7 @@
     margin-top: 1000px;
   }
   100% {
-    margin-top: -100%;
+    margin-top: -500px;
   }
 }
 
@@ -49,7 +55,7 @@
     margin-top: 1000px;
   }
   100% {
-    margin-top: -100%;
+    margin-top: -500px;
   }
 }
 
@@ -58,7 +64,7 @@
     margin-top: 1000px;
   }
   100% {
-    margin-top: -100%;
+    margin-top: -500px;
   }
 }
 
@@ -92,6 +98,8 @@
 /* ANIMATIONS */
 
 .x1 {
+  overflow: hidden;
+
   -webkit-animation: animateBubble 5s linear infinite,
     sideWays 1s ease-in-out infinite alternate;
   -moz-animation: animateBubble 5s linear infinite,
@@ -99,7 +107,7 @@
   animation: animateBubble 5s linear infinite,
     sideWays 1s ease-in-out infinite alternate;
 
-  left: -5%;
+  left: 5%;
   top: 5%;
 
   -webkit-transform: scale(0.6);
@@ -108,6 +116,7 @@
 }
 
 .x2 {
+  overflow: hidden;
   -webkit-animation: animateBubble 10s linear infinite,
     sideWays 4s ease-in-out infinite alternate;
   -moz-animation: animateBubble 10s linear infinite,
@@ -116,7 +125,7 @@
     sideWays 4s ease-in-out infinite alternate;
 
   left: 5%;
-  top: 80%;
+  top: 5%;
 
   -webkit-transform: scale(0.4);
   -moz-transform: scale(0.4);
@@ -124,6 +133,7 @@
 }
 
 .x3 {
+  overflow: hidden;
   -webkit-animation: animateBubble 7s linear infinite,
     sideWays 2s ease-in-out infinite alternate;
   -moz-animation: animateBubble 7s linear infinite,
@@ -140,6 +150,7 @@
 }
 
 .x4 {
+  overflow: hidden;
   -webkit-animation: animateBubble 4s linear infinite,
     sideWays 1s ease-in-out infinite alternate;
   -moz-animation: animateBubble 4s linear infinite,
@@ -156,6 +167,7 @@
 }
 
 .x5 {
+  overflow: hidden;
   -webkit-animation: animateBubble 29s linear infinite,
     sideWays 4s ease-in-out infinite alternate;
   -moz-animation: animateBubble 29s linear infinite,
@@ -172,6 +184,7 @@
 }
 
 .x6 {
+  overflow: hidden;
   -webkit-animation: animateBubble 21s linear infinite,
     sideWays 2s ease-in-out infinite alternate;
   -moz-animation: animateBubble 21s linear infinite,
@@ -188,6 +201,7 @@
 }
 
 .x7 {
+  overflow: hidden;
   -webkit-animation: animateBubble 20s linear infinite,
     sideWays 2s ease-in-out infinite alternate;
   -moz-animation: animateBubble 20s linear infinite,
@@ -204,6 +218,7 @@
 }
 
 .x8 {
+  overflow: hidden;
   -webkit-animation: animateBubble 22s linear infinite,
     sideWays 3s ease-in-out infinite alternate;
   -moz-animation: animateBubble 22s linear infinite,
@@ -220,6 +235,7 @@
 }
 
 .x9 {
+  overflow: hidden;
   -webkit-animation: animateBubble 29s linear infinite,
     sideWays 4s ease-in-out infinite alternate;
   -moz-animation: animateBubble 29s linear infinite,
@@ -236,6 +252,7 @@
 }
 
 .x10 {
+  overflow: hidden;
   -webkit-animation: animateBubble 6s linear infinite,
     sideWays 2s ease-in-out infinite alternate;
   -moz-animation: animateBubble 6s linear infinite,
@@ -254,6 +271,7 @@
 /* OBJECTS */
 
 .circle {
+  overflow: hidden;
   -webkit-border-radius: 50%;
   -moz-border-radius: 50%;
   border-radius: 50%;
@@ -271,6 +289,7 @@
 }
 
 .circle:after {
+  overflow: hidden;
   background: -moz-radial-gradient(
     center,
     ellipse cover,

@@ -8,21 +8,21 @@
 	
     ?>
 <div class="bg-banner hero-banner__container data-mdb-animation-show-on-load">
-    <div class=" container-fluid  d-flex  justify-content-md-center mx-5  ">
-        <div class="row my-5 ">
-            <div class=" col-sm-6 p-3 ">
+    <div class=" container-fluid d-flex  justify-content-center  mx-5  ">
+        <div class="row my-5 container">
+            <div class=" col-xs-12 col-sm-6 p-3 text-center">
 				<?php if($banner['body_text'] != ""): ?>
 				<p class="mt-2 lead text-sm-left font-weight-bold"><?php echo $banner['body_text'] ?></p>
 				<?php endif; ?>
 
-				<div class="d-flex t m-0 justify-content-end">
+				<div class="d-flex t m-0 justify-content-start">
 				<?php if($banner['button_link'] != "" && $banner['button_text'] != ""):?>
 				<a  href="<?php echo $banner['button_link'] ?>" class="btn btn-sample m-0 "><?php echo $banner['button_text']; ?></a>
 				<?php endif; ?>
 				</div>
 			</div>
 			
-            <div class="col-xs-12 col-sm-5">
+            <div class="col-xs-12 col-sm-5 text-md-center">
 			<?php if($banner['image'] != "" ):?>
 					<img class="align-self-center mr-3  hero-img__style " src="<?php echo $banner['image']['sizes']['medium'] ?>" alt="image">
 				<?php endif; ?>
@@ -78,12 +78,16 @@
 					</div>
 					</section>
 								
-					 <section class="home-page__contact-container p-5">
-					 <h3 class=' font-weight-bold text-center pb-3'>Contact</h3>
-					<div class="container  text-center rounded home-page__contact-section w-100 ">
-						<div class="h-2">
-							<h3>some info here...</h3>
-							</div>
+					 <section class=" cotainer-fluid home-page__contact-container p-5 w-100">
+
+
+					 <!-- <div class="container-fluid home-page__container-section p-5 "> -->
+  						 <h3 class="text-center home-page__header pb-3 ">Contact</h3>
+           						<?php echo do_shortcode('[contact-form-7 id="70" title="Contact Form"]'); ?>
+						<!-- </div>   -->
+
+				
+					
 					</div>
 
 </section> 
