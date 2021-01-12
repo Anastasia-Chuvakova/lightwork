@@ -43,49 +43,59 @@
 
 <!-- BIOGRAPHY SECTION -->
 
-		<section class=" container pt-5   ">
+	<section class=" container py-5   ">
 		<div><?php if($team_section_title!= ""):?>
-			<h3 class="font-weight-bold d-none d-lg-block text-center"><?php echo $team_section_title; ?></h3>
-			<div class="text-center">
-			<button  class="btn btn-sample mb-3 d-lg-none  " type="button" data-toggle="collapse"
-			 data-target="#collapseItems" aria-expanded="false" 
-			 aria-controls="collapseItems"><?php echo $team_section_title; ?></button>
-			 </div>
+					<h3 class="font-weight-bold d-none d-lg-block text-center pb-5"><?php echo $team_section_title; ?></h3>
+					<div class="text-center ">
+					<button  class="btn btn-sample mb-3 d-lg-none  " type="button" data-toggle="collapse"
+					data-target="#collapseItems" aria-expanded="false" 
+					aria-controls="collapseItems"><?php echo $team_section_title; ?></button>
+					</div>
 			<?php endif; ?>
-			</div>
-			<div class="collapse d-lg-block" id="collapseItems">
-	<?php
-    $args = array(  
-        'post_type' => 'biography',
-        'post_status' => 'publish',
-        'posts_per_page' => 99, 
-        'orderby' => 'date', 
-        'order' => 'DESC', 
-    );
-
-    $loop = new WP_Query( $args ); 
-        
-    while ( $loop->have_posts() ) : $loop->the_post(); 
-        $bio_image = get_field('image');
-        $bio_name = get_field('name');
-        $bio_text = get_field('bio');
-
-
-	?>
-		<div class="pb-3 mt-3   d-flex  flex-column flex-lg-row align-items-lg-center">
-			<div class=" text-center text-lg-right"><img class="rounded" src="<?php echo $bio_image['sizes']['medium']; ?>"  
-			alt="<?php echo $bio_image['alt']; ?>">
-			</div>
-			<div class="ml-3">
-			<p class="mt-3 mt-lg-0 font-weight-bold"><?php echo $bio_name; ?></p>
-			<p class="mt-3 "><?php echo $bio_text; ?></p>
-			</div>
 		</div>
 
-	<?php endwhile; ?>
-</div>
+		<div class="collapse d-lg-block" id="collapseItems">
+				<?php
+				$args = array(  
+					'post_type' => 'biography',
+					'post_status' => 'publish',
+					'posts_per_page' => 99, 
+					'orderby' => 'date', 
+					'order' => 'DESC', 
+				);
+
+					$loop = new WP_Query( $args ); 
+						
+					while ( $loop->have_posts() ) : $loop->the_post(); 
+						$bio_image = get_field('image');
+						$bio_name = get_field('name');
+						$bio_text = get_field('bio');
+
+
+					?>
+				<div class="pb-3 mt-3   d-flex  flex-column flex-lg-row ">
+					<div class=" text-center text-lg-right"><img class="rounded" src="<?php echo $bio_image['sizes']['medium']; ?>"  
+					alt="<?php echo $bio_image['alt']; ?>">
+					</div>
+					<div class="ml-3">
+					<p class="mt-3 mt-lg-0 font-weight-bold"><?php echo $bio_name; ?></p>
+					<p class="mt-3 "><?php echo $bio_text; ?></p>
+					</div>
+				</div>
+
+			<?php endwhile; ?>
+		</div>
+		
 	</section>
-        
+	<div class="container  about-us__positions-link">
+			<div class="text-center py-5 ">
+				<div class="pb-4"><h3 class="">Come work with us!</h3>
+				<p class="mt-3">some text here (too small to see from jpeg file, ask Itzel)</p>
+				</div>	
+				
+				<button class=" btn btn-sample ">See open positions</button>
+			</div>
+		</div>
         <?php 
     get_footer();
     ?>
