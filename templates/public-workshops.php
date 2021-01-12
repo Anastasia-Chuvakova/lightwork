@@ -4,9 +4,11 @@
   
     ?>
 <div class="container-fluid text-center p-5 workshops-page__container">
+   
      <div class="container  workshops-page__body" >
-            <h3 class="p-3">Hang in there! This page will be added soon!</h3>
+            <h3 class="p-3">Coming soon...</h3>
     </div>
+  
     <div id="background-wrap ">
             <div class="circle x1"></div>
             <div class="circle x2"></div>

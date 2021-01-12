@@ -5,14 +5,17 @@
 		//GET ACF FIELDS
 	$banner = get_field('banner');
 	$services = get_field('services');
+	$workshop_section = get_field('section_title');
+	?>
 	
-    ?>
+	<!-- BANNER SECTION -->
 <div class="bg-banner hero-banner__container data-mdb-animation-show-on-load">
     <div class=" container-fluid d-flex  justify-content-center  mx-5  ">
         <div class="row my-5 container">
-            <div class=" col-xs-12 col-sm-6 p-3 text-center">
+            <!-- <div class=" col-xs-12 col-sm-6 p-3 text-center"> -->
+			<div class=" col-xs-12 col-md-6 p-3 text-center">
 				<?php if($banner['body_text'] != ""): ?>
-				<p class="mt-2 lead text-sm-left font-weight-bold"><?php echo $banner['body_text'] ?></p>
+				<p class="mt-2  text-sm-left font-weight-bold"><?php echo $banner['body_text'] ?></p>
 				<?php endif; ?>
 
 				<div class="d-flex t m-0 justify-content-start">
@@ -22,7 +25,8 @@
 				</div>
 			</div>
 			
-            <div class="col-xs-12 col-sm-5 text-md-center">
+            <!-- <div class="col-xs-12 col-sm-5 text-md-center"> -->
+				<div class="d-none d-md-block">
 			<?php if($banner['image'] != "" ):?>
 					<img class="align-self-center mr-3  hero-img__style " src="<?php echo $banner['image']['sizes']['medium'] ?>" alt="image">
 				<?php endif; ?>
@@ -31,14 +35,20 @@
     </div>
 </div>      
 
-	
+	<!-- SERVICES SECTION -->
 <section class="home-page__services-container">
 	<div class="container">
       			<section class="home-page__services-text">
 			  <div class="theme-bg-dark py-md-5 mt-2 text-center">
-			  <?php if($services['title'] != "" && $services['body_text'] != "" ):?>
-				<h3 class='font-weight-bold'><?php echo $services['title'] ?></h3>
-				 <p class="mt-3 lead"><?php echo $services['body_text'] ?></p>
+			 
+			  <?php if( $services['title_link'] != "" && $services['title'] != ""  ):?>
+				<a class="button" href="<?php echo esc_url( $services['title_link'] ); ?>">
+					<h3 ><?php echo $services['title'] ?></h3>
+				</a>
+
+				<?php endif; ?>
+				<?php if( $services['body_text'] != ""  ):?>
+				 <p class="mt-3 "><?php echo $services['body_text'] ?></p>
 				<?php endif; ?>
 			  </div>
 			  
@@ -63,14 +73,18 @@
 
 					?>
 					<div class="col-xs-12 mx-0 mx-lg-3 mx-xl-5 " >
+					<?php if($card_title != "" && $card_body != "" && $card_image != "" ):?>
+
+						<a class="button" href="<?php echo esc_url( $card_link ); ?>">
 						<div class="card m-2 " style="background-image: url(<?php echo $card_image['sizes']['medium']; ?>);">
 							<div class="card-body d-flex flex-column justify-content-center">
-							<?php if($card_title != "" && $card_body != ""):?>
-							<h5 class="card-title"><?php echo $card_title; ?></h5>
-							<?php echo $card_body; ?>							<?php endif;?>
+							<h5 class="card-title font-weight-bold"><?php echo $card_title; ?></h5>
+							<?php echo $card_body; ?>							
 							</div>
-
 						</div>
+						</a>
+
+						<?php endif;?>
 					</div>
 					<?php endwhile; ?>
                
@@ -82,7 +96,11 @@
 
 
 					 <!-- <div class="container-fluid home-page__container-section p-5 "> -->
-  						 <h3 class="text-center home-page__header pb-3 ">Contact</h3>
+						 <div><?php if($workshop_section['section_title'] != "" ):?>
+							 <h3 class="text-center home-page__header pb-3 "><?php echo $workshop_section; ?></h3>
+							 <?php endif;?>
+						 </div>
+  						 
            						<?php echo do_shortcode('[contact-form-7 id="70" title="Contact Form"]'); ?>
 						<!-- </div>   -->
 

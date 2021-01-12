@@ -1,0 +1,10 @@
+<svg style="background-color: #FFF;"   xmlns="http://www.w3.org/2000/svg"   version="1.1" preserveAspectRatio="xMaxYMin meet">
+    <path d="M0,500 C150,200 350,0 500,100 L500,00 L0,0 Z" style="stroke: none; fill:rgb(85, 214, 190) ;">  
+    </path>
+</svg>
+
+<!-- <svg style="background-color: #FFF;"   xmlns="http://www.w3.org/2000/svg"   version="1.1" 
+preserveAspectRatio="xMaxYMin meet">
+    <path d="M0,100 C150,200 350,0 500,100 L500,00 L0,0 Z" style="stroke: none; fill:rgb(85, 114, 190) ;">  
+    </path>
+</svg> -->

@@ -1,55 +1,32 @@
 <footer  class="page-footer font-small ">
-          <!-- Footer Links -->
-  <div class="container-fluid text-center text-md-left">
+        
+<div class="container-fluid text-center ">
+			 <div class="row my-4  ">
+							<!-- Grid column -->
+					<div class="col-md-5 col-lg-3 mt-md-0 mt-3  ">
+						<a class="navbar-logo w-100 p-2 rounded" href="#">
+						<img src="<?php echo get_template_directory_uri() ?>/assets/images/logo/logo.png" alt="logo"/></a>
+					</div>
 
-<!-- Grid row -->
-<div class="row my-4  ">
+				 <hr class="clearfix w-100 d-md-none pb-3">
 
-  <!-- Grid column -->
-  <div class="col-md-5 col-lg-3 mt-md-0 mt-3  ">
-  <a class="navbar-logo w-100 p-3 rounded" href="#"><img src="<?php echo get_template_directory_uri() ?>/assets/images/logo/logo-nobg.png" alt="logo"/></a>
+  		
+					<div class=" col-xs-5  col-md-3 col-lg-2  pr-md-0  footer-links__container">
+					
+					<!-- Links -->
+						<h5 class="font-weight-bold">Quick Links</h5>
+						<?php wp_nav_menu(array(
+								'theme_location' => 'footer-menu',
+								'container_class' => 'footer-menu'
+							));?>
+					</div>
+			</div>
+</div>
+
 	
-
-  </div>
-  <!-- Grid column -->
-
-  <hr class="clearfix w-100 d-md-none pb-3">
-
-  <!-- Grid column -->
-  <div class="col-md-3  mb-md-0  mt-md-4 pr-md-0 pl-md-4">
-
-	<!-- Links -->
-	<h5 class="font-weight-bold">Quick Links</h5>
-
-	<ul class="list-unstyled  ">
-	  <li>
-		<a class="text-dark" href="<?php echo site_url('/about-us') ?>">About Us</a>
-	  </li>
-	  <li>
-		<a class="text-dark" href="<?php echo site_url('/services') ?>">Services</a>
-	  </li>
-	  <li>
-		<a class="text-dark" href="<?php echo site_url('contact') ?>!">Contact</a>
-	  </li>
-	 </ul>
-
-  </div>
-  <!-- Grid column -->
-
-  <!-- Grid column -->
- 
-
-</div>
-<!-- Grid row -->
-
-</div>
-<!-- Footer Links -->
-
-
-		   
-	    </footer>
+</footer>
     
-    </div>
+    <!-- </div> -->
   
     
     <!-- Bootstrap Javascript -->          

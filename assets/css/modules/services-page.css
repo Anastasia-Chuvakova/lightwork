@@ -9,6 +9,7 @@
 
 .services-page__info-section {
   border-bottom: 2px solid rgb(221, 221, 221);
+  padding-top: 10px;
 }
 
 /* SERVICES - WORKSHOP */
@@ -19,7 +20,7 @@
 
 .workshop-description {
   position: relative;
-  width: calc(100% - 300px);
+  width: calc(100% - 200px);
 }
 .workshop-learningOutcomes__container {
   border: 2px solid rgb(85, 214, 190);
@@ -39,7 +40,7 @@
 .workshop-image {
   position: absolute;
   bottom: 30%;
-  right: -25px;
+  /* right: -20px; */
 }
 /* .workshop-image img {
   width: 300px;
@@ -49,13 +50,26 @@
   width: calc(100% - 320px);
   max-width: 100%;
 }
-
+@media screen and (min-width: 930px) {
+  .workshop-image {
+    position: absolute;
+    right: -70px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .workshop-image {
+    position: absolute;
+    right: -20px;
+  }
+}
 @media screen and (max-width: 768px) {
   .workshop-image {
     position: absolute;
+    right: -70px;
   }
   .workshop-image img {
     width: 100%;
+    right: -70px;
   }
   .workshop-content--has-img {
     width: 100% !important;
@@ -65,8 +79,13 @@
     width: calc(100%);
   }
 }
-
-@media screen and (max-width: 1000px) {
+/* @media screen and (min-width:994px) {
+  .workshop-description {
+    position: relative;
+    width: calc(100% - 800px );
+}
+} */
+@media screen and (max-width: 991px) {
   .workshop-description {
     position: relative;
     width: calc(100%);

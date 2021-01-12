@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?><svg xmlns="http://www.w3.org/2000/svg" 
+xmlns:xlink="http://www.w3.org/1999/xlink" width="500" height="937" 
+preserveAspectRatio="xMidYMid" viewBox="0 0 2560 937"
+ style="z-index:1;margin-right:-2px;display:block;background-repeat-y:initial;
+ background-repeat-x:initial;background-color:rgb(255, 255, 255);animation-play-state:paused" >
+ <g transform="translate(1280,468.5) scale(1,1) translate(-1280,-468.5)" 
+ style="transform:matrix(1, 0, 0, 1, 0, 0);animation-play-state:paused" >
+ <linearGradient id="lg-0.5250871578155574" x1="0" x2="1" y1="0" y2="0" style="animation-play-state:paused" >
+ <stop stop-color="#ff00ff" offset="0" style="animation-play-state:paused" ></stop>
+
+
+<stop stop-color="#00ffff" offset="1" style="animation-play-state:repeat" ></stop></linearGradient>
+<path d="M 0 0 L 0 858.569 Q 256 715.347 512 693.961 T 1024 593.909 T 1536 539.915 T 2048 418.96 T 2560 402.307 L 2560 0 Z" fill="url(#lg-0.5250871578155574)" opacity="0.4" style="opacity:0.4;animation-play-state:paused" ></path>
+<path d="M 0 0 L 0 851.648 Q 256 762.229 512 734.87 T 1024 734.973 T 1536 623.721 T 2048 553.095 T 2560 342.944 L 2560 0 Z" fill="url(#lg-0.5250871578155574)" opacity="0.4" style="opacity:0.4;animation-play-state:paused" ></path>
+<path d="M 0 0 L 0 809.331 Q 256 801.999 512 776.209 T 1024 700.508 T 1536 576.132 T 2048 475.489 T 2560 465.495 L 2560 0 Z" fill="url(#lg-0.5250871578155574)" opacity="0.4" style="opacity:0.4;animation-play-state:paused" ></path>
+<path d="M 0 0 L 0 876.196 Q 256 785.72 512 766.764 T 1024 714.51 T 1536 543.747 T 2048 496.211 T 2560 370.743 L 2560 0 Z" fill="url(#lg-0.5250871578155574)" opacity="0.4" style="opacity:0.4;animation-play-state:paused" ></path>
+<path d="M 0 0 L 0 812.974 Q 256 775.759 512 751.704 T 1024 707.258 T 1536 589.416 T 2048 471.145 T 2560 371.788 L 2560 0 Z" fill="url(#lg-0.5250871578155574)" opacity="0.4" style="opacity:0.4;animation-play-state:paused" ></path></g></svg>

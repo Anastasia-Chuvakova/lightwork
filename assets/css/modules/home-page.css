@@ -9,11 +9,6 @@
   border-color: transparent;
 }
 
-.nav-item:hover {
-  background-color: #acfcd9;
-  border-radius: 5px;
-}
-
 .home-page__contact-container {
   background-color: #acfcd9;
 }
