@@ -29,9 +29,12 @@
 					</div>
 
 					<div class="d-flex flex-column-reverse d-md-flex flex-md-row mt-3 ">
-					<div class=""><p class="mt-3 "><?php echo $how_we_work['text_description']; ?></p>
-						<p class=""><?php echo $how_we_work['upper_text']; ?></p></div>
-						<div class="text-center ml-md-3"><?php echo '<img   src="' .$how_we_work['upper_image']['sizes']['medium'] . '" alt="' . $how_we_work['image']['alt'] . '" />'; ?></div>
+					<div class="">
+						<p class="mt-3 "><?php echo $how_we_work['text_description']; ?></p>
+						<div class="text-center ml-md-3 d-md-none"><?php echo '<img   src="' .$how_we_work['upper_image']['sizes']['medium'] . '" alt="' . $how_we_work['image']['alt'] . '" />'; ?></div>
+						<p class=""><?php echo $how_we_work['upper_text']; ?></p>
+					</div>
+						<div class="d-none d-md-block ml-md-3"><?php echo '<img   src="' .$how_we_work['upper_image']['sizes']['medium'] . '" alt="' . $how_we_work['image']['alt'] . '" />'; ?></div>
 					</div>
 
 					<div class="d-md-flex mt-3 ">
