@@ -6,6 +6,7 @@
      $about_us = get_field('about_us_section');
 	 $how_we_work = get_field('how_we_work_section');
 	 $team_section_title = get_field('team_section_title');
+	 $contact_us = get_field('contact_us_section');
 	
 	?>
 	
@@ -24,11 +25,12 @@
 				<?php if($how_we_work['title'] != ""  && $how_we_work['text_description'] != "" && $how_we_work['upper_text'] != "" && $how_we_work['upper_image'] != "" && $how_we_work['lower_text'] != "" && $how_we_work['lower_image'] != ""):?>
 					<div class="">
 						<h3 class='text-center '><?php echo $how_we_work['title']; ?></h3>
-						<p class="mt-3 "><?php echo $how_we_work['text_description']; ?></p>
+						
 					</div>
 
 					<div class="d-flex flex-column-reverse d-md-flex flex-md-row mt-3 ">
-						<div class=""><p class=""><?php echo $how_we_work['upper_text']; ?></p></div>
+					<div class=""><p class="mt-3 "><?php echo $how_we_work['text_description']; ?></p>
+						<p class=""><?php echo $how_we_work['upper_text']; ?></p></div>
 						<div class="text-center ml-md-3"><?php echo '<img   src="' .$how_we_work['upper_image']['sizes']['medium'] . '" alt="' . $how_we_work['image']['alt'] . '" />'; ?></div>
 					</div>
 
@@ -43,7 +45,7 @@
 
 <!-- BIOGRAPHY SECTION -->
 
-	<section class=" container py-5   ">
+	<section class=" container pb-5   ">
 		<div><?php if($team_section_title!= ""):?>
 					<h3 class="font-weight-bold d-none d-lg-block text-center pb-5"><?php echo $team_section_title; ?></h3>
 					<div class="text-center ">
@@ -87,13 +89,18 @@
 		</div>
 		
 	</section>
-	<div class="container  about-us__positions-link">
+	<div class="container-fluid  about-us__positions-link">
 			<div class="text-center py-5 ">
-				<div class="pb-4"><h3 class="">Come work with us!</h3>
-				<p class="mt-3">some text here (too small to see from jpeg file, ask Itzel)</p>
+				<div class="pb-4"><?php if($contact_us['title'] != "" && $contact_us['description'] !="" ):?>
+				<h3 class=""><?php echo $contact_us['title']?></h3>
+				<p class="mt-3"><?php echo $contact_us['description']?></p>
+				<?php endif; ?>
 				</div>	
-				
-				<button class=" btn btn-sample ">See open positions</button>
+				<div>
+				<?php if($contact_us['button_link']!="" && $contact_us['button_text']!=""):?>	
+				<a  href="<?php echo $contact_us['button_link'] ?>" class="btn btn-sample m-0 "><?php echo $contact_us['button_text']; ?></a>
+				<?php endif; ?>	
+			</div>	
 			</div>
 		</div>
         <?php 

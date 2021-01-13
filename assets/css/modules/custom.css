@@ -121,8 +121,26 @@ p {
 .menu {
   /* display: inline-block; */
   list-style: none;
+  padding: 0;
+}
+/* .collapsed {
+  padding: 0;
+  margin: 0;
+} */
+.show {
 }
 
+.navbar {
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+#menu-header-menu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* top: 2rem; */
+}
 /* @media screen and (max-width: 900px) {
   .menu {
     display: inline-block;
@@ -136,6 +154,9 @@ p {
 
     margin-bottom: 0;
   }
+  #menu-header-menu {
+    flex-direction: row;
+  }
   /* .menu-item a {
     color: #000;
     font-size: 16px;
@@ -144,6 +165,7 @@ p {
 
 .menu-item {
   padding: 5px;
+  margin: 5px;
   margin-right: 5px;
 }
 .menu-item a {

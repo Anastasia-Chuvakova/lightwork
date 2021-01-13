@@ -10,7 +10,7 @@
 	
 	<!-- BANNER SECTION -->
 <div class="bg-banner hero-banner__container data-mdb-animation-show-on-load">
-    <div class=" container-fluid d-flex  justify-content-center  mx-5  ">
+    <div class=" container-fluid d-flex  justify-content-center">
         <div class="row my-5 container">
             <!-- <div class=" col-xs-12 col-sm-6 p-3 text-center"> -->
 			<div class=" col-xs-12 col-md-6 p-3 text-center">

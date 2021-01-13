@@ -16,7 +16,7 @@
 
 <!-- HEADER NAVBAR  -->
 <div class="containter-fluid  ">
-  <header class="d-flex flex-column  align-items-center flex-md-row  justify-content-lg-between header-container">	 
+  <header class="d-flex  flex-column align-items-center flex-md-row justify-content-center justify-content-lg-between header-container">	 
     <div>
                     <div class="mx-1" >
                       <a class="navbar-logo w-100 p-3 " href="<?php echo site_url('/home') ?>">
@@ -26,7 +26,9 @@
     
      </div>
      <nav class="navbar navbar-expand-md navbar-light m-2  p-0 p-md-4">
-              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+              <button class="navbar-toggler" type="button" data-toggle="collapse" 
+              data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
+               aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
               </button>
 
